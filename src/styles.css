@@ -125,8 +125,8 @@
     z-index: 1;
     pointer-events: none;
     background-image: var(--grain);
-    mix-blend-mode: multiply;
-    opacity: 0.85;
+    opacity: 0.45;
+    transform: translateZ(0);
   }
 
   ::selection {
@@ -222,8 +222,7 @@
     inset: 0;
     pointer-events: none;
     background-image: var(--grain);
-    opacity: 0.7;
-    mix-blend-mode: multiply;
+    opacity: 0.35;
   }
 
   .tape {
@@ -353,11 +352,11 @@
   50%      { transform: translateY(-7px) rotate(1.4deg); }
 }
 
-.sway { animation: sway 13s var(--ease-soft) infinite; transform-origin: 50% 100%; }
-.sway-slow { animation: sway 19s var(--ease-soft) infinite; transform-origin: 50% 100%; }
-.breathe { animation: breathe 7.5s ease-in-out infinite; }
-.float-soft { animation: softFloat 9s ease-in-out infinite; }
-.seal-shimmer { animation: sealShimmer 6.5s ease-in-out infinite; }
+.sway { animation: sway 13s var(--ease-soft) infinite; transform-origin: 50% 100%; will-change: transform; }
+.sway-slow { animation: sway 19s var(--ease-soft) infinite; transform-origin: 50% 100%; will-change: transform; }
+.breathe { animation: breathe 7.5s ease-in-out infinite; will-change: transform; }
+.float-soft { animation: softFloat 9s ease-in-out infinite; will-change: transform; }
+.seal-shimmer { animation: sealShimmer 6.5s ease-in-out infinite; will-change: box-shadow; }
 
 @media (prefers-reduced-motion: reduce) {
   .sway, .sway-slow, .breathe, .float-soft { animation: none !important; }

@@ -4,9 +4,9 @@ import teddy from "../../assets/teddy-letter.webp";
 import stem from "../../assets/stem-cosmos.webp";
 
 const BETTER = [
-  "More time — the real kind, when I have it.",
-  "Clearer words when my day gets loud.",
-  "Better listening, even when I’m tired.",
+  "Giving you my full attention whenever we talk.",
+  "Never letting a busy day make you feel forgotten.",
+  "Listening with an open heart whenever you're ready to share.",
 ];
 
 export function PartTwo() {
@@ -34,6 +34,7 @@ export function PartTwo() {
                 alt="A small teddy bear holding a cream envelope sealed with a rose heart."
                 className="relative z-[2] w-full drop-shadow-[0_22px_28px_rgba(121,91,84,0.18)]"
                 loading="lazy"
+                decoding="async"
                 width={760}
                 height={780}
               />
@@ -62,33 +63,45 @@ export function PartTwo() {
               title={<span id="chapter-two">I’m sorry about yesterday, babe</span>}
             />
 
-            <div className="letter-body mt-8">
+            <div className="letter-body mt-8 space-y-5">
+              <Reveal as="p" className="letter-lead font-serif text-[1.12em] leading-relaxed text-rose-deep">
+                Babe, I&apos;m really sorry about yesterday. 🥺❤️
+              </Reveal>
+
               <Reveal as="p">
-                I know I couldn’t spend much time talking to you yesterday because I was
-                on my trip. I’m sorry if that made you feel ignored, or if it felt like I
-                wasn’t making enough time for you. I never wanted you to feel that way.
-                Even when I couldn’t talk to you properly, it didn’t mean you weren’t on
-                my mind.
+                I&apos;m so sorry, na. I know I couldn&apos;t talk to you properly, and I didn&apos;t even see your messages because my phone was in the locker room. Please believe me, babe, I wasn&apos;t ignoring you. The very first thing I did after getting my phone was check your messages because you were the first person I wanted to hear from. I wanted to know how you were, what you were doing, and whether you had messaged me.
               </Reveal>
 
-              <Reveal as="p" className="mt-5">
-                I’m not going to dress it up. The day was busy, but I could have found a
-                few quiet minutes, and I didn’t. That part is on me.
+              <Reveal as="p">
+                And babe, honestly, even though I was enjoying the trip with my family, I don&apos;t think I was enjoying every moment the way I could have. You kept coming into my mind, na. Every time I went on a ride, I imagined how much more fun it would&apos;ve been if you were there with me. On every roller coaster, I wanted you beside me. On every water slide, I wished you were there, laughing with me. I wanted to hold your hand and walk around the amusement park with you, tease you, watch your reactions, and make memories together. I kept thinking about how much I wished I could experience all those little things with you. ❤️
               </Reveal>
 
-              <Reveal as="p" className="mt-5">
-                I’ve been thinking about what love actually looks like on a normal day.
-                It can’t only be “I love you” sent in a hurry before sleeping. It has to
-                be time — real time, when I have it. Clearer words when I’m busy, even if
-                it’s just three lines saying I’m not free right now and I’ll come back.
-                Listening properly when I’m tired and still want to hear you. That’s the
-                part I want to get better at, not because you asked me to, but because
-                you deserve it.
+              <Reveal as="p">
+                And babe, there&apos;s something that&apos;s been hurting me a lot. When I tell you I love you and you don&apos;t say it back, I don&apos;t know why, but it keeps haunting me. I keep wondering if I&apos;ve hurt you, if you&apos;re upset with me, or if something has changed. I&apos;m not saying you have to say it back every time, na. I just miss the way we talk, and I miss feeling close to you. Maybe I&apos;m overthinking, but I can&apos;t pretend it isn&apos;t making me sad.
               </Reveal>
 
-              <Reveal as="p" className="mt-5">
-                So, I’m sorry. Sincerely. Not so you’ll tell me it’s fine — I just wanted
-                you to know that I noticed, and I’m listening.
+              <Reveal as="p">
+                Today, every time my phone notification rings, I immediately think it&apos;s you. I pick up my phone hoping to see your message, and when it&apos;s not you, I feel a little disappointed. Then I put my phone down, and a little later, when it rings again, I do the same thing. It&apos;s silly, maybe, but I miss you that much, babe. I miss talking to you properly. I miss your messages. I miss feeling like I can share every little thing with you.
+              </Reveal>
+
+              <Reveal as="p">
+                I&apos;m not telling you this to make you feel bad or to force you to talk to me. I just want you to understand what&apos;s going on in my heart, na. I&apos;m genuinely sorry if I made you feel ignored yesterday. You matter so much to me, and I never wanted a day out with my family to make you feel like you had less importance in my life.
+              </Reveal>
+
+              <Reveal as="p">
+                <strong className="font-semibold text-rose-deep">Babe, please forgive me if I hurt you.</strong> I wish I had checked my messages sooner. I wish I could go back and make sure you didn&apos;t feel forgotten. I can&apos;t change what happened yesterday, but I can listen to you, understand how you felt, and try to do better.
+              </Reveal>
+
+              <Reveal as="p">
+                I miss you so much, Julian. I wish I could tell you all this while holding your hand instead of typing it through a screen. I wish I could hug you right now and tell you that I&apos;m sorry, that I love you, and that even when I&apos;m somewhere else, you&apos;re still someone I carry in my thoughts.
+              </Reveal>
+
+              <Reveal as="p">
+                I don&apos;t know if you&apos;re upset with me, babe, and I don't want to assume. If something is bothering you, please tell me when you&apos;re ready. I want to understand you, too.
+              </Reveal>
+
+              <Reveal as="p" className="font-serif italic text-[1.14em] text-rose-deep">
+                I love you, my babe. So much. And I&apos;m sorry about yesterday. ❤️🥺
               </Reveal>
             </div>
 
@@ -116,9 +129,9 @@ export function PartTwo() {
                   style={{ ["--tape-color" as string]: "rgba(236,162,178,.5)" }}
                 />
                 <p className="font-hand text-[clamp(1.05rem,1.6vw,1.25rem)] leading-snug text-rose-deep">
-                  p.s. I’ll call when you’re free — no rush.
+                  p.s. Whenever you&apos;re ready to talk, I&apos;m right here.
                   <br />
-                  I just miss your voice.
+                  I miss your voice so much.
                 </p>
                 <img
                   src={stem}
@@ -126,6 +139,7 @@ export function PartTwo() {
                   aria-hidden="true"
                   className="float-soft pointer-events-none absolute -bottom-10 -right-10 w-[74px] rotate-[18deg] opacity-80"
                   loading="lazy"
+                  decoding="async"
                 />
               </div>
             </Reveal>

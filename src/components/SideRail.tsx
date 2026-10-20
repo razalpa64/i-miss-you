@@ -29,23 +29,29 @@ export function SideRail() {
 
   useEffect(() => {
     let frame = 0;
+    const elements = SECTIONS.map((s) => ({ id: s.id, el: document.getElementById(s.id) }));
+
     const onScroll = () => {
-      cancelAnimationFrame(frame);
+      if (frame) return;
       frame = requestAnimationFrame(() => {
+        frame = 0;
         const line = window.innerHeight * 0.42;
         let current = "cover";
-        for (const s of SECTIONS) {
-          const el = document.getElementById(s.id);
-          if (el && el.getBoundingClientRect().top <= line) current = s.id;
+        for (let i = 0; i < elements.length; i++) {
+          const item = elements[i];
+          if (!item.el) item.el = document.getElementById(item.id);
+          if (item.el && item.el.getBoundingClientRect().top <= line) {
+            current = item.id;
+          }
         }
-        setActive(current);
+        setActive((prev) => (prev !== current ? current : prev));
       });
     };
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
-    window.addEventListener("resize", onScroll);
+    window.addEventListener("resize", onScroll, { passive: true });
     return () => {
-      cancelAnimationFrame(frame);
+      if (frame) cancelAnimationFrame(frame);
       window.removeEventListener("scroll", onScroll);
       window.removeEventListener("resize", onScroll);
     };

@@ -15,8 +15,8 @@ type RevealProps = {
 export function Reveal({
   children,
   delay = 0,
-  y = 20,
-  blur = true,
+  y = 16,
+  blur = false,
   className,
   as = "div",
   once = true,
@@ -26,10 +26,10 @@ export function Reveal({
   return (
     <Comp
       className={className}
-      initial={reduce ? { opacity: 0 } : { opacity: 0, y, filter: blur ? "blur(7px)" : "none" }}
-      whileInView={reduce ? { opacity: 1 } : { opacity: 1, y: 0, filter: "blur(0px)" }}
-      viewport={{ once, margin: "-8% 0px -12% 0px" }}
-      transition={{ duration: reduce ? 0.4 : 0.95, delay, ease: [0.22, 0.61, 0.36, 1] }}
+      initial={reduce ? { opacity: 0 } : { opacity: 0, y, ...(blur ? { filter: "blur(6px)" } : {}) }}
+      whileInView={reduce ? { opacity: 1 } : { opacity: 1, y: 0, ...(blur ? { filter: "blur(0px)" } : {}) }}
+      viewport={{ once, margin: "-6% 0px -8% 0px" }}
+      transition={{ duration: reduce ? 0.35 : 0.65, delay, ease: [0.22, 0.61, 0.36, 1] }}
     >
       {children}
     </Comp>
@@ -38,15 +38,14 @@ export function Reveal({
 
 export const staggerParent: Variants = {
   hidden: {},
-  show: { transition: { staggerChildren: 0.14, delayChildren: 0.1 } },
+  show: { transition: { staggerChildren: 0.12, delayChildren: 0.08 } },
 };
 
 export const staggerChild: Variants = {
-  hidden: { opacity: 0, y: 16, filter: "blur(6px)" },
+  hidden: { opacity: 0, y: 14 },
   show: {
     opacity: 1,
     y: 0,
-    filter: "blur(0px)",
-    transition: { duration: 0.9, ease: [0.22, 0.61, 0.36, 1] },
+    transition: { duration: 0.65, ease: [0.22, 0.61, 0.36, 1] },
   },
 };

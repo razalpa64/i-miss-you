@@ -20,6 +20,7 @@ export function BotanicalFrame() {
         className="sway absolute -left-4 top-[54%] w-[clamp(46px,6.4vw,104px)] opacity-[0.30]"
         style={{ maskImage: fade, WebkitMaskImage: fade }}
         loading="lazy"
+        decoding="async"
       />
       <img
         src={stemEucalyptusSoft}
@@ -27,6 +28,7 @@ export function BotanicalFrame() {
         className="sway-slow absolute -right-3 top-[7%] w-[clamp(44px,5.6vw,92px)] rotate-[172deg] opacity-[0.26]"
         style={{ maskImage: fade, WebkitMaskImage: fade }}
         loading="lazy"
+        decoding="async"
       />
       <img
         src={stemCosmosMirror}
@@ -34,6 +36,7 @@ export function BotanicalFrame() {
         className="sway-slow absolute right-[6%] bottom-[-6%] hidden w-[clamp(56px,5vw,84px)] rotate-[188deg] opacity-[0.20] sm:block"
         style={{ maskImage: fade, WebkitMaskImage: fade }}
         loading="lazy"
+        decoding="async"
       />
     </div>
   );
