@@ -158,11 +158,10 @@ export function Finale({ onReplay }: { onReplay: () => void }) {
         </div>
       </div>
 
-      <footer className="border-t border-cocoa/10 bg-cream/80 px-6 py-7 text-center">
+      <footer className="border-t border-cocoa/10 bg-cream/80 px-6 py-8 text-center">
         <p className="eyebrow text-[9.5px] text-rose-deep/70">for julian · from razal</p>
-        <p className="mx-auto mt-3 max-w-[560px] text-[10.5px] leading-relaxed text-cocoa/75">
-          Illustrations painted for you. One pencil sketch by Razal. Postage stamp:
-          a public-domain botanical plate from Wikimedia Commons.
+        <p className="mt-2 font-hand text-[1.12rem] text-rose-deep/80">
+          every second, I miss you ♡
         </p>
       </footer>
     </section>

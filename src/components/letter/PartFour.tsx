@@ -2,6 +2,7 @@ import { Reveal } from "../Reveal";
 import { ChapterHeader, WaxSeal } from "./ChapterBits";
 import stamp from "../../assets/stamp.webp";
 import stem from "../../assets/stem-eucalyptus.webp";
+import stemCosmos from "../../assets/stem-cosmos.webp";
 
 export function PartFour() {
   return (
@@ -10,6 +11,15 @@ export function PartFour() {
       aria-labelledby="chapter-four"
       className="relative z-[2] px-6 pt-[clamp(1rem,3vh,2rem)] sm:px-10"
     >
+      {/* Background botanical accent */}
+      <img
+        src={stemCosmos}
+        alt=""
+        aria-hidden="true"
+        className="sway-slow pointer-events-none absolute -right-10 top-12 -z-[1] hidden w-[clamp(80px,10vw,135px)] rotate-[20deg] opacity-30 lg:block"
+        loading="lazy"
+        decoding="async"
+      />
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 -z-[1]"

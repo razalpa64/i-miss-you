@@ -2,6 +2,7 @@ import { Reveal } from "../Reveal";
 import { ChapterHeader, SmallFlower } from "./ChapterBits";
 import catFlower from "../../assets/cat-flower.webp";
 import bouquet from "../../assets/bouquet-small.webp";
+import stemCosmosMirror from "../../assets/stem-cosmos-mirror.webp";
 
 const WISHES = [
   "talk about nothing until it’s suddenly late",
@@ -19,6 +20,15 @@ export function PartThree() {
       aria-labelledby="chapter-three"
       className="relative z-[2] px-6 pt-[clamp(4.5rem,10vh,8rem)] sm:px-10"
     >
+      {/* Background botanical accent */}
+      <img
+        src={stemCosmosMirror}
+        alt=""
+        aria-hidden="true"
+        className="sway pointer-events-none absolute -left-10 top-20 -z-[1] hidden w-[clamp(85px,11vw,145px)] rotate-[12deg] opacity-30 lg:block"
+        loading="lazy"
+        decoding="async"
+      />
       <div className="mx-auto w-full max-w-[1080px]">
         <div className="grid gap-10 lg:grid-cols-[minmax(0,660px)_280px] lg:gap-16">
           <div>

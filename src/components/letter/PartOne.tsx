@@ -1,6 +1,8 @@
 import { Reveal } from "../Reveal";
 import { ChapterHeader, MarginNote, SmallFlower } from "./ChapterBits";
 import { SecondsTicker } from "./SecondsTicker";
+import stemCosmos from "../../assets/stem-cosmos.webp";
+import stemEucalyptus from "../../assets/stem-eucalyptus.webp";
 
 const LITTLE_THINGS = [
   {
@@ -57,6 +59,23 @@ export function PartOne() {
       aria-labelledby="chapter-one"
       className="relative z-[2] px-6 pt-[clamp(2.25rem,5vh,3.75rem)] sm:px-10"
     >
+      {/* Background botanical accents */}
+      <img
+        src={stemCosmos}
+        alt=""
+        aria-hidden="true"
+        className="sway pointer-events-none absolute -left-10 top-16 -z-[1] hidden w-[clamp(80px,11vw,140px)] rotate-[-14deg] opacity-35 lg:block"
+        loading="lazy"
+        decoding="async"
+      />
+      <img
+        src={stemEucalyptus}
+        alt=""
+        aria-hidden="true"
+        className="sway-slow pointer-events-none absolute -right-10 top-[45%] -z-[1] hidden w-[clamp(85px,11.5vw,145px)] rotate-[24deg] opacity-30 lg:block"
+        loading="lazy"
+        decoding="async"
+      />
       <div className="mx-auto w-full max-w-[1080px]">
         <div className="relative mx-auto max-w-[660px]">
           <ChapterHeader
